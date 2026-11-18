@@ -12,6 +12,8 @@ A simple static asset host powered by GitHub Pages.
 │   ├── images/
 │   ├── icons/
 │   └── logos/
+│   └── arlo/
+│   └── westbourne/
 ├── fonts/
 ├── libraries/
 │   ├── css/
