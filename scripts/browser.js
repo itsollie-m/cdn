@@ -79,7 +79,7 @@
 
     if (entry.type === "directory") {
       row.style.cursor = "pointer";
-      row.addEventListener("click", () => { current = [...current, entry.name]; search.value = ""; render(); });
+      row.addEventListener("click", () => { current = entry.path.split("/"); search.value = ""; render(); });
     } else {
       const url = CDN_ORIGIN + "/" + entry.path.split("/").map(encodeURIComponent).join("/");
       row.append(makeButton("Copy URL", "", async () => {
