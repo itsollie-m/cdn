@@ -138,7 +138,7 @@
     } else {
       entries.forEach((entry) => listing.append(makeEntry(entry)));
     }
-    count.textContent = flatten(root, []).filter((entry) => entry.type === "file").length + " files";
+    count.textContent = entries.filter((entry) => entry.type === "file").length + " files";
   }
 
   search.addEventListener("input", render);
