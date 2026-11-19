@@ -33,7 +33,29 @@
               "name": "logos",
               "type": "directory",
               "path": "assets/arlo/logos",
-              "children": []
+              "children": [
+                {
+                  "name": "arlo-logo-circle.png",
+                  "type": "file",
+                  "path": "assets/arlo/logos/arlo-logo-circle.png",
+                  "size": 85045,
+                  "url": "/assets/arlo/logos/arlo-logo-circle.png"
+                },
+                {
+                  "name": "arlo-logo-square.png",
+                  "type": "file",
+                  "path": "assets/arlo/logos/arlo-logo-square.png",
+                  "size": 10420,
+                  "url": "/assets/arlo/logos/arlo-logo-square.png"
+                },
+                {
+                  "name": "arlo-logo-transparent.png",
+                  "type": "file",
+                  "path": "assets/arlo/logos/arlo-logo-transparent.png",
+                  "size": 47666,
+                  "url": "/assets/arlo/logos/arlo-logo-transparent.png"
+                }
+              ]
             }
           ]
         },
@@ -90,7 +112,29 @@
               "name": "logos",
               "type": "directory",
               "path": "assets/westbourne/logos",
-              "children": []
+              "children": [
+                {
+                  "name": "westbourne-logo-circle.png",
+                  "type": "file",
+                  "path": "assets/westbourne/logos/westbourne-logo-circle.png",
+                  "size": 143458,
+                  "url": "/assets/westbourne/logos/westbourne-logo-circle.png"
+                },
+                {
+                  "name": "westbourne-logo-square.png",
+                  "type": "file",
+                  "path": "assets/westbourne/logos/westbourne-logo-square.png",
+                  "size": 837771,
+                  "url": "/assets/westbourne/logos/westbourne-logo-square.png"
+                },
+                {
+                  "name": "westbourne-logo-transparent.png",
+                  "type": "file",
+                  "path": "assets/westbourne/logos/westbourne-logo-transparent.png",
+                  "size": 78020,
+                  "url": "/assets/westbourne/logos/westbourne-logo-transparent.png"
+                }
+              ]
             }
           ]
         }
