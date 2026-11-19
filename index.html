@@ -4,32 +4,59 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101114">
-  <meta name="description" content="Ollie M's public static asset CDN.">
+  <meta name="description" content="Browse Ollie M's public static asset CDN.">
   <title>Ollie M's CDN</title>
   <style>
-    :root { color-scheme: dark; --bg:#101114; --panel:#191b20; --text:#f4f5f7; --muted:#a4a8b2; --accent:#ff3e3e; }
+    :root { color-scheme: dark; --bg:#101114; --panel:#191b20; --panel2:#202229; --text:#f4f5f7; --muted:#a4a8b2; --accent:#ff3e3e; --line:#30323a; }
     * { box-sizing:border-box; }
-    body { margin:0; min-height:100vh; display:grid; place-items:center; padding:24px; background:radial-gradient(ellipse at top, #292026 0, var(--bg) 55%); color:var(--text); font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif; }
-    main { width:min(100%,680px); padding:clamp(28px,6vw,52px); border:1px solid #30323a; border-radius:22px; background:color-mix(in srgb,var(--panel) 92%,transparent); box-shadow:0 24px 80px #0006; }
-    .mark { display: block; width: 44px; height: 44px; border-radius: 13px; object-fit: cover; }
-    h1 { margin:24px 0 8px; font-size:clamp(2rem,7vw,3.25rem); line-height:1.05; letter-spacing:-.055em; }
-    p { color:var(--muted); }
-    code { color:#fff; background:#292c34; padding:3px 7px; border-radius:6px; overflow-wrap:anywhere; }
-    .status { display:inline-flex; align-items:center; gap:8px; margin-top:18px; padding:7px 11px; border:1px solid #343740; border-radius:999px; color:#c9ccd4; font-size:.85rem; }
-    .dot { width:8px; height:8px; border-radius:50%; background:#45c486; box-shadow:0 0 12px #45c48688; }
-    footer { margin-top:34px; padding-top:18px; border-top:1px solid #30323a; color:#858a95; font-size:.85rem; }
-    a { color:#ff7777; text-decoration:none; } a:hover { text-decoration:underline; }
+    body { margin:0; min-height:100vh; padding:32px 20px; background:radial-gradient(ellipse at top, #292026 0, var(--bg) 58%); color:var(--text); font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif; }
+    main { width:min(100%,900px); margin:0 auto; }
+    header { display:flex; align-items:center; gap:15px; margin:10px 0 30px; }
+    .mark { width:48px; height:48px; border-radius:14px; object-fit:cover; background:var(--panel2); }
+    h1 { margin:0; font-size:clamp(1.6rem,5vw,2.25rem); letter-spacing:-.045em; line-height:1.15; }
+    header p { margin:5px 0 0; color:var(--muted); }
+    .panel { border:1px solid var(--line); border-radius:18px; background:color-mix(in srgb,var(--panel) 94%,transparent); overflow:hidden; box-shadow:0 24px 80px #0005; }
+    .toolbar { display:flex; gap:12px; align-items:center; padding:18px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+    .search-wrap { flex:1; min-width:210px; position:relative; }
+    input { width:100%; padding:12px 14px; border:1px solid #393c46; border-radius:10px; outline:none; background:#111318; color:var(--text); font:inherit; }
+    input:focus { border-color:var(--accent); box-shadow:0 0 0 3px #ff3e3e20; }
+    .crumbs { display:flex; align-items:center; gap:7px; padding:13px 18px; color:var(--muted); font-size:.9rem; overflow-x:auto; white-space:nowrap; }
+    .crumbs button { border:0; padding:0; background:none; color:#ff8585; font:inherit; cursor:pointer; }
+    .listing { padding:5px 18px 15px; }
+    .item { display:flex; align-items:center; gap:12px; padding:12px 10px; border-bottom:1px solid #2a2c33; min-width:0; }
+    .item:last-child { border-bottom:0; }
+    .item-icon { width:30px; flex:none; text-align:center; font-size:1.2rem; }
+    .item-main { min-width:0; flex:1; }
+    .item-name { display:block; overflow-wrap:anywhere; font-weight:600; }
+    .item-meta { color:var(--muted); font-size:.8rem; }
+    .item button,.item a { flex:none; border:1px solid #393c46; border-radius:8px; padding:7px 10px; background:#22252c; color:var(--text); font:inherit; font-size:.82rem; text-decoration:none; cursor:pointer; }
+    .item button:hover,.item a:hover { border-color:var(--accent); }
+    .folder-button { flex:1!important; display:flex; align-items:center; gap:12px; border:0!important; padding:0!important; background:none!important; text-align:left; min-width:0; }
+    .folder-button .item-main { overflow:hidden; }
+    .empty,.loading,.error { padding:35px 18px; text-align:center; color:var(--muted); }
+    .status { display:flex; justify-content:space-between; gap:10px; padding:13px 18px; border-top:1px solid var(--line); color:#858a95; font-size:.8rem; }
+    .dot { display:inline-block; width:7px; height:7px; margin-right:7px; border-radius:50%; background:#45c486; }
+    footer { padding:20px 4px; color:#858a95; font-size:.85rem; }
+    footer a { color:#ff8585; text-decoration:none; }
+    @media(max-width:520px) { body { padding:20px 12px; } .toolbar { padding:13px; } .listing { padding-inline:10px; } .item { gap:8px; } .item button,.item a { padding:7px 8px; } }
   </style>
 </head>
 <body>
   <main>
-    <img class="mark" src="/assets/images/profile.png" alt="Ollie M's profile picture">
-    <h1>Ollie M's CDN</h1>
-    <p>A home for publicly accessible static assets, files and resources.</p>
-    <p>Files are served from this domain. For example:</p>
-    <p><code>https://cdn.olliem.dev/assets/example.png</code></p>
-    <span class="status"><span class="dot"></span> CDN endpoint online</span>
-    <footer>Made by yours truly, Ollie M · <a href="https://olliem.dev">olliem.dev</a></footer>
+    <header>
+      <img class="mark" src="/assets/images/profile.png" alt="Ollie M's profile picture">
+      <div><h1>Ollie M's CDN</h1><p>Public files, neatly organised.</p></div>
+    </header>
+    <section class="panel" aria-label="CDN file browser">
+      <div class="toolbar">
+        <div class="search-wrap"><input id="search" type="search" placeholder="Search all files and folders..." autocomplete="off" aria-label="Search all files and folders"></div>
+      </div>
+      <nav class="crumbs" id="breadcrumbs" aria-label="Breadcrumb"><span>/</span></nav>
+      <div class="listing" id="listing" aria-live="polite"><div class="loading">Loading directory…</div></div>
+      <div class="status"><span><i class="dot"></i> CDN browser</span><span id="count">Loading manifest</span></div>
+    </section>
+    <footer>Made by Ollie M · <a href="https://olliem.dev">olliem.dev</a></footer>
   </main>
+  <script src="/scripts/browser.js" defer></script>
 </body>
 </html>
