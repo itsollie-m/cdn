@@ -1,0 +1,131 @@
+{
+  "name": "Ollie's CDN",
+  "files": [
+    {
+      "name": "assets",
+      "type": "directory",
+      "path": "assets",
+      "children": [
+        {
+          "name": "arlo",
+          "type": "directory",
+          "path": "assets/arlo",
+          "children": [
+            {
+              "name": "fonts",
+              "type": "directory",
+              "path": "assets/arlo/fonts",
+              "children": []
+            },
+            {
+              "name": "icons",
+              "type": "directory",
+              "path": "assets/arlo/icons",
+              "children": []
+            },
+            {
+              "name": "images",
+              "type": "directory",
+              "path": "assets/arlo/images",
+              "children": []
+            },
+            {
+              "name": "logos",
+              "type": "directory",
+              "path": "assets/arlo/logos",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "icons",
+          "type": "directory",
+          "path": "assets/icons",
+          "children": []
+        },
+        {
+          "name": "images",
+          "type": "directory",
+          "path": "assets/images",
+          "children": [
+            {
+              "name": "profile.png",
+              "type": "file",
+              "path": "assets/images/profile.png",
+              "size": 1348710,
+              "url": "/assets/images/profile.png"
+            }
+          ]
+        },
+        {
+          "name": "logos",
+          "type": "directory",
+          "path": "assets/logos",
+          "children": []
+        },
+        {
+          "name": "westbourne",
+          "type": "directory",
+          "path": "assets/westbourne",
+          "children": [
+            {
+              "name": "fonts",
+              "type": "directory",
+              "path": "assets/westbourne/fonts",
+              "children": []
+            },
+            {
+              "name": "icons",
+              "type": "directory",
+              "path": "assets/westbourne/icons",
+              "children": []
+            },
+            {
+              "name": "images",
+              "type": "directory",
+              "path": "assets/westbourne/images",
+              "children": []
+            },
+            {
+              "name": "logos",
+              "type": "directory",
+              "path": "assets/westbourne/logos",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fonts",
+      "type": "directory",
+      "path": "fonts",
+      "children": []
+    },
+    {
+      "name": "libraries",
+      "type": "directory",
+      "path": "libraries",
+      "children": [
+        {
+          "name": "css",
+          "type": "directory",
+          "path": "libraries/css",
+          "children": []
+        },
+        {
+          "name": "javascript",
+          "type": "directory",
+          "path": "libraries/javascript",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "roblox",
+      "type": "directory",
+      "path": "roblox",
+      "children": []
+    }
+  ]
+}
