@@ -86,6 +86,45 @@
           "children": []
         },
         {
+          "name": "swindon-transit",
+          "type": "directory",
+          "path": "assets/swindon-transit",
+          "children": [
+            {
+              "name": "fonts",
+              "type": "directory",
+              "path": "assets/swindon-transit/fonts",
+              "children": []
+            },
+            {
+              "name": "icons",
+              "type": "directory",
+              "path": "assets/swindon-transit/icons",
+              "children": []
+            },
+            {
+              "name": "images",
+              "type": "directory",
+              "path": "assets/swindon-transit/images",
+              "children": []
+            },
+            {
+              "name": "logos",
+              "type": "directory",
+              "path": "assets/swindon-transit/logos",
+              "children": [
+                {
+                  "name": "transit-square.png",
+                  "type": "file",
+                  "path": "assets/swindon-transit/logos/transit-square.png",
+                  "size": 1003149,
+                  "url": "/assets/swindon-transit/logos/transit-square.png"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "westbourne",
           "type": "directory",
           "path": "assets/westbourne",
@@ -113,6 +152,13 @@
               "type": "directory",
               "path": "assets/westbourne/logos",
               "children": [
+                {
+                  "name": "utils-logo-square.png",
+                  "type": "file",
+                  "path": "assets/westbourne/logos/utils-logo-square.png",
+                  "size": 2795301,
+                  "url": "/assets/westbourne/logos/utils-logo-square.png"
+                },
                 {
                   "name": "westbourne-logo-circle.png",
                   "type": "file",
